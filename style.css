@@ -16,7 +16,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-姿勢: border-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -60,6 +60,7 @@ p {
 .gradient-text {
     background: linear-gradient(135deg, var(--primary), #673AB7);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -139,6 +140,9 @@ p {
 .logo-img {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
@@ -256,8 +260,15 @@ p {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 /* Features */
@@ -394,7 +405,7 @@ p {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     padding-top: 40px;
     text-align: center;
     font-size: 0.9rem;
@@ -415,17 +426,49 @@ p {
 
 /* Mobile Responsive */
 @media (max-width: 991px) {
-    h1 { font-size: 3rem; }
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .hero-btns { justify-content: center; }
-    .hero-stats { justify-content: center; }
-    .floating-card { display: none; }
+    h1 {
+        font-size: 3rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .floating-card {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
-    .navbar { padding: 16px 0; }
-    .nav-links { display: none; }
-    .cta-card { padding: 60px 24px; }
-    .cta-card h2 { font-size: 2.5rem; }
-    .footer-content { flex-direction: column; gap: 40px; text-align: center; align-items: center; }
+    .navbar {
+        padding: 16px 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .cta-card {
+        padding: 60px 24px;
+    }
+
+    .cta-card h2 {
+        font-size: 2.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+    }
 }
