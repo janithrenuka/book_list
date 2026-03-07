@@ -1,6 +1,6 @@
 {
-    "name": "book_list",
-    "short_name": "book_list",
+    "name": "book_shelve",
+    "short_name": "book_shelve",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

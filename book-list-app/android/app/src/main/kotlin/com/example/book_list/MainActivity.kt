@@ -1,4 +1,4 @@
-package com.example.book_list
+package com.janith.book_shelve
 
 import io.flutter.embedding.android.FlutterActivity
 
